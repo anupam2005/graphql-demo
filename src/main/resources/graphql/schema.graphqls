@@ -1,0 +1,30 @@
+type Mutation{
+
+    createApoet(poet:PoetInput):Poet
+}
+type Query{
+
+     allPoets:[Poet]
+     getPoet(id:Int):Poet
+
+}
+
+
+type Poet{
+
+    id:ID!
+    name:String
+    genre:String
+    language:String
+    noOfBooksWritten:Int
+
+}
+
+input PoetInput{
+
+    name:String
+    genre:String
+    language:String
+    noOfBooksWritten:Int
+
+}
